@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>VariableOSC.Gui</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!--
+      Declares DPI awareness via the embedded app manifest - the mechanism
+      dotnet new winforms uses by default, and more reliable than only
+      calling Application.SetHighDpiMode() at runtime (manifest wins if
+      both are present). Paired with AutoScaleMode.None on every Form/
+      UserControl so absolute pixel coordinates render exactly as coded.
+    -->
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationIcon>..\Assets\VariableOSC.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VariableOSC.Core\VariableOSC.Core.csproj" />
+  </ItemGroup>
+
+</Project>

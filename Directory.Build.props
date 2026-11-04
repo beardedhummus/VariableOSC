@@ -1,0 +1,14 @@
+<Project>
+
+  <!--
+    Shared by every project in the solution (console app, Core library,
+    GUI app) so the version only has to be bumped in one place. See
+    CHANGELOG.md for the versioning scheme.
+  -->
+  <PropertyGroup>
+    <Version>0.8.2</Version>
+    <AssemblyVersion>0.8.2.0</AssemblyVersion>
+    <FileVersion>0.8.2.0</FileVersion>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Plain cross-platform console that links Core's pure pointer-scan files
+    (no Win32 calls) and runs them against a synthetic in-memory "process".
+    Lets the Make Permanent algorithm be verified on any machine without
+    Windows or a real target. Not shipped.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>VariableOSC.SelfTest</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\VariableOSC.Core\PointerPath.cs" Link="Core\PointerPath.cs" />
+    <Compile Include="..\VariableOSC.Core\PointerScanTypes.cs" Link="Core\PointerScanTypes.cs" />
+    <Compile Include="..\VariableOSC.Core\PointerScanner.cs" Link="Core\PointerScanner.cs" />
+    <Compile Include="..\VariableOSC.Core\PointerChainCodec.cs" Link="Core\PointerChainCodec.cs" />
+    <Compile Include="..\VariableOSC.Core\PointerResolver.cs" Link="Core\PointerResolver.cs" />
+    <Compile Include="..\VariableOSC.Core\PermanenceVerifier.cs" Link="Core\PermanenceVerifier.cs" />
+    <Compile Include="..\VariableOSC.Core\PointerScanDiagnostics.cs" Link="Core\PointerScanDiagnostics.cs" />
+  </ItemGroup>
+
+</Project>
